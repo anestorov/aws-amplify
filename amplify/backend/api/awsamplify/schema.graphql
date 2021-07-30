@@ -17,4 +17,7 @@ type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
   postID: ID!
   post: Post @connection(fields: ["postID"])
   content: String!
+  blog: Blog @connection
+  blogID: String
 }
+ 

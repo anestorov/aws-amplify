@@ -133,6 +133,26 @@ export const schema = {
                     "type": "String",
                     "isRequired": true,
                     "attributes": []
+                },
+                "blog": {
+                    "name": "blog",
+                    "isArray": false,
+                    "type": {
+                        "model": "Blog"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetName": "commentBlogId"
+                    }
+                },
+                "blogID": {
+                    "name": "blogID",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -157,5 +177,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "29a5f9fa3685e75389b054153cc3152b"
+    "version": "1dca7acb297f13e4114412f07c21c83d"
 };
